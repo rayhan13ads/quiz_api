@@ -1,5 +1,8 @@
 import { DataSource } from "typeorm";
 import { config } from "./config/config";
+import { Option } from "./entities/options.entity";
+import { Question } from "./entities/question.entity";
+import { Quiz } from "./entities/quiz.entity";
 
 
 console.log(config.db.host);
@@ -16,7 +19,11 @@ export const AppDataSource = new DataSource({
   cache: {
     duration: 10000,
   },
-  entities: [`${__dirname}/build/entities/*.entity{.ts,.js}`, `${__dirname}src/entities/*.entity{.ts,.js}`],
+  entities: [
+    Quiz,
+    Question,
+    Option
+  ],
   migrations: [],
   subscribers: [],
 });
