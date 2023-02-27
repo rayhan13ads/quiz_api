@@ -1,0 +1,23 @@
+{
+
+    "apps": [{
+
+        "name" : "nodepm2",
+
+        "script" : "./build/index.js",
+
+        "env" : {
+
+            "PORT" : 4000
+
+        },
+
+        "env_production" : {
+
+            "PORT" : 4000
+
+        }
+
+    }]
+
+}
