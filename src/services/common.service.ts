@@ -11,10 +11,11 @@ export  class CommonService<T> {
 
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    async paginate(page = 1, relations:any = []): Promise<any> {
+    async paginate(page = 1,condition:any ,relations:any = []): Promise<any> {
         const take = 15;
 
         const [data, total] = await this.repository.findAndCount({
+            where:condition,
             take,
             skip: (page - 1) * take,
             relations,

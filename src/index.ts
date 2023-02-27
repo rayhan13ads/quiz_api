@@ -3,6 +3,7 @@ import express, { Request, Response } from "express";
 import * as dotenv from "dotenv";
 import bodyParser from "body-parser";
 import { AppDataSource } from "./data-source";
+import quizRoute from "./routes/quiz.route";
 
 dotenv.config();
 const app = express();
@@ -31,6 +32,8 @@ app.use((req, res, next) => {
 });
 
 /** Set the routes of our API */
+app.use('/api/v1/quizs', quizRoute);
+
 
 /** Error handling */
 app.use((req:Request, res:Response,) => {

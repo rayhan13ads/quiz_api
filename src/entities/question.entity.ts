@@ -1,5 +1,5 @@
 import { Column, Entity, JoinColumn, OneToMany, OneToOne } from "typeorm";
-import Model from "./model.entity";
+import Model from "./model";
 import { Option } from "./options.entity";
 import { Quiz } from "./quiz.entity";
 

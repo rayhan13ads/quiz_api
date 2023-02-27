@@ -1,5 +1,5 @@
 import { Column, Entity, JoinColumn, OneToOne } from "typeorm";
-import Model from "./model.entity";
+import Model from "./model";
 import { Question } from "./question.entity";
 
 
